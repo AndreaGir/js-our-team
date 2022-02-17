@@ -41,15 +41,16 @@ const team = [
   }
 
   let carta = 
-  `<div class="team-card">
-  <div class="card-image">
-    <img
-      src=${immag}
-      alt="Wayne Barnett"
-    />
-  </div>
-  <div class="card-text">
-    ${nome}
-    ${ruolo}
-  </div>
+  `<div class="card-image">
+  <img
+    src="${immag}"
+    alt="Wayne Barnett"
+  />
+</div>
+<div class="card-text">
+  <h3>${nome}</h3>
+  <p>${ruolo}</p>
+</div>
 </div>`
+
+teamContainer.innerHTML += card
