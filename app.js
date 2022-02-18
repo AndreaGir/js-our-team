@@ -31,26 +31,38 @@ const team = [
     },
   ];
 
-  let cartaMembro = document.getElementsByClassName('team-container')
+  let cartaMembro = document.querySelector('.team-container')
 
+  
 
-  for(let i = 0; i < team.length ; i++){
-      const nome = team[i].name ;
-      const immag = team[i].image;
-      const ruolo = team[i].role;
+  for(let i = 1; i < team.length ; i++){
+
+    
+
+       const nome = team[i].name ;
+       const immag = team[i].image; 
+      const ruolo = team[i].role; 
+
+    const tim = `<div class="card-image">
+    <img
+       src="${immag}"
+      alt="${nome}"
+     />
+   </div>
+   <div class="card-text">
+     <h3>${nome}</h3>
+     <p>${ruolo}</p>
+   </div> 
+   </div>`
+
+      
+
+  
+   cartaMembro.innerHTML += tim
+   
   }
+  
+  
+  
 
-  let carta = 
-  `<div class="card-image">
-  <img
-    src="${immag}"
-    alt="Wayne Barnett"
-  />
-</div>
-<div class="card-text">
-  <h3>${nome}</h3>
-  <p>${ruolo}</p>
-</div>
-</div>`
-
-teamContainer.innerHTML += card
+  
